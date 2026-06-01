@@ -1,0 +1,94 @@
+body {
+    font-family: 'century gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; 
+}
+
+.header {
+    background: linear-gradient(to right, #5fa44d 30%, #0b3d2c 70%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.header img {
+    height: 100px; 
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px; 
+}
+
+.title h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.title span {
+    font-size: 25px; 
+    color: #000000; 
+}
+
+nav {
+    margin-left: auto; 
+}
+
+nav a {
+    margin-left: 20px; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+a:link, a:visited {
+    background-color: hsl(85, 75%, 27%);
+    color: rgb(144, 228, 148);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+a:hover, a:active {
+    background-color: rgb(91, 151, 75);
+  }
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+   
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.message p {
+    line-height: 1.7;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 15px;
+}

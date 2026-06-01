@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS alumni_registration (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  student_number VARCHAR(32) NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  course VARCHAR(120) DEFAULT NULL,
+  grad_year INT DEFAULT NULL,
+  id_image VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX (student_number)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+

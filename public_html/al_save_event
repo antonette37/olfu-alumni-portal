@@ -1,0 +1,32 @@
+<?php
+session_start();
+header('Content-Type: application/json');
+
+if (!isset($_SESSION['user'])) {
+    echo json_encode(['success' => false, 'message' => 'Not logged in']);
+    exit;
+}
+
+require_once 'db_connect.php'; // replace with your actual DB connection file
+
+$user_id = $_SESSION['user']['id']; // Adjust if your session stores user differently
+$title = $_POST['title'] ?? '';
+$desc = $_POST['desc'] ?? '';
+$date = $_POST['date'] ?? '';
+
+if (!$title || !$date) {
+    echo json_encode(['success' => false, 'message' => 'Missing data']);
+    exit;
+}
+
+$stmt = $conn->prepare("INSERT INTO events (user_id, title, description, event_date) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("isss", $user_id, $title, $desc, $date);
+
+if ($stmt->execute()) {
+    echo json_encode(['success' => true]);
+} else {
+    echo json_encode(['success' => false, 'message' => 'DB error']);
+}
+$stmt->close();
+$conn->close();
+?>

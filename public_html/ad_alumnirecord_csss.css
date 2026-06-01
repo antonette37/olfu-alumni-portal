@@ -1,0 +1,153 @@
+body {
+    font-family: 'century gothic', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #333; 
+}
+
+.header {
+    background: linear-gradient(to right, #5fa44d 30%, #0b3d2c 70%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.header img {
+    height: 100px; 
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px; 
+}
+
+.title h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.title span {
+    font-size: 25px; 
+    color: #000000; 
+}
+
+nav {
+    margin-left: auto; 
+}
+
+nav a {
+    margin-left: 20px; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+a:link, a:visited {
+    background-color: hsl(85, 75%, 27%);
+    color: rgb(144, 228, 148);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+a:hover, a:active {
+    background-color: rgb(91, 151, 75);
+  } /* end header with button links | shaira */
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 250px;
+    margin-right: 5px;
+}
+
+.search-form button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    overflow-x: auto;
+    display: block;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+th {
+    background: #007bff;
+    color: #fff;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.action-links a {
+    margin-right: 8px;
+    color: blue;
+    text-decoration: none;
+}
+
+.pagination {
+    margin-top: 15px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.pagination a.active {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+img {
+    border-radius: 4px;
+}

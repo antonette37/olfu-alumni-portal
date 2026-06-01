@@ -1,0 +1,9 @@
+# Redirect favicon.ico requests to olfulogo.png
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^favicon\.ico$ olfulogo.png [L]
+    # Pass Authorization header to PHP (required for mobile API Bearer tokens on Hostinger)
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+

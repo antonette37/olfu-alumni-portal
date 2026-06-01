@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: 'century gothic', sans-serif;
+  background-color: #ffffff;
+  padding: 0;
+  color: #333; 
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.top-nav .admin-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.top-nav .nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 10px;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #fafafa;
+  border-right: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  margin: 5px;
+  text-align: center;
+}
+
+.sidebar a:hover {
+  background-color: #e6e6e6;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-content h2 {
+  margin-top: 100px;
+}
+
+.header {
+  background: linear-gradient(to right, #5fa44d 30%, #0b3d2c 70%);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+
+.header img {
+  height: 100px; 
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px; 
+}
+
+.title h1 {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.title span {
+  font-size: 25px; 
+  color: #000000; 
+}
+
+nav {
+  margin-left: auto; 
+}
+
+nav a {
+  margin-left: 20px; 
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+a:link, a:visited {
+  background-color: hsl(85, 75%, 27%);
+  color: rgb(144, 228, 148);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgb(91, 151, 75);
+}

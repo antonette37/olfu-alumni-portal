@@ -1,0 +1,122 @@
+body {
+    font-family: 'Century Gothic', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.header {
+    background: linear-gradient(to right, #5fa44d 30%, #0b3d2c 70%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header img {
+    height: 100px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.title h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.title span {
+    font-size: 25px;
+    color: #000000;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a:link, a:visited {
+    background-color: hsl(85, 75%, 27%);
+    color: rgb(144, 228, 148);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: rgb(91, 151, 75);
+}
+
+form fieldset {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin-top: 50px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+.signup-link {
+    margin-top: 10px;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}

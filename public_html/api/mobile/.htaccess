@@ -1,0 +1,8 @@
+# Mobile API — ensure Authorization reaches PHP on Apache/Hostinger
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>

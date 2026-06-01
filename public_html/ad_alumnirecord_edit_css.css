@@ -1,0 +1,132 @@
+body {
+    font-family: 'century gothic', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #333; 
+}
+
+.header {
+    background: linear-gradient(to right, #5fa44d 30%, #0b3d2c 70%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.header img {
+    height: 100px; 
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px; 
+}
+
+.title h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.title span {
+    font-size: 25px; 
+    color: #000000; 
+}
+
+nav {
+    margin-left: auto; 
+}
+
+nav a {
+    margin-left: 20px; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+a:link, a:visited {
+    background-color: hsl(85, 75%, 27%);
+    color: rgb(144, 228, 148);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+a:hover, a:active {
+    background-color: rgb(91, 151, 75);
+  }
+
+form {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    vertical-align: top;
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}

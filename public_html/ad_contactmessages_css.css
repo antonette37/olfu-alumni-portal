@@ -1,0 +1,158 @@
+/* ============================================================
+   Contact Messages Admin Page - Enhanced CSS
+   Consistent with the green admin panel design system
+   ============================================================ */
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f1f5f9 !important;
+}
+
+/* ---- PAGE HEADER ---- */
+.cm-header-section {
+    background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.cm-header-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+.cm-header-section h2 {
+    color: white !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+}
+.cm-header-section .text-sm { color: rgba(187,247,208,0.9) !important; }
+
+.cm-stat-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 0.625rem 1rem;
+    color: white;
+    min-width: 100px;
+}
+.cm-stat-pill .value { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+.cm-stat-pill .label { font-size: 0.7rem; color: rgba(187,247,208,0.9); margin-top: 2px; }
+
+.glassmorphism {
+    background: white !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 14px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04) !important;
+    transition: box-shadow 0.2s !important;
+}
+.glassmorphism:hover, .glassmorphism:focus-within {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.09) !important;
+    border-color: #e2e8f0 !important;
+}
+.card-hover:hover { transform: none !important; box-shadow: 0 4px 16px rgba(0,0,0,0.09) !important; }
+
+.glassmorphism .bg-white.border-2 {
+    border-radius: 12px !important;
+    border-color: #f1f5f9 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
+    transition: box-shadow 0.15s, transform 0.15s;
+}
+.glassmorphism .bg-white.border-2:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important; transform: translateY(-1px); }
+
+#statusTabs .tab-link {
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    transition: background 0.15s, color 0.15s !important;
+    padding: 0.75rem 1rem !important;
+}
+#statusTabs .tab-link.bg-green-100 { color: #15803d !important; }
+#statusTabs .tab-link.bg-red-100 { color: #dc2626 !important; }
+#statusTabs .tab-link.bg-yellow-100 { color: #a16207 !important; }
+
+#statusTabs > div { border-radius: 10px !important; overflow: hidden; border: 1px solid #e2e8f0; }
+
+.bg-gradient-to-r.from-green-50.to-blue-50 {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+}
+
+.tickets-table { table-layout: fixed; }
+.tickets-table thead th {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.08em !important;
+    font-weight: 700 !important;
+    color: #94a3b8 !important;
+    padding: 0.7rem 1rem !important;
+}
+.tickets-table tbody tr {
+    transition: background 0.12s;
+}
+.tickets-table tbody tr:hover td { background: #f8fafc; }
+.tickets-table tbody td { font-size: 0.8125rem; }
+
+.row-link { cursor: pointer; }
+
+.border.rounded-md {
+    border-radius: 8px !important;
+}
+a.border.rounded-md { font-size: 0.8125rem !important; font-weight: 600 !important; }
+
+#inqPanel {
+    border-left: 1px solid #e2e8f0 !important;
+    box-shadow: -4px 0 30px rgba(0,0,0,0.12) !important;
+}
+#inqPanel .border-b { border-color: #f1f5f9 !important; }
+#inqPanel .bg-gray-50 { background: #f8fafc !important; }
+
+.text-center.py-16 .fa-inbox { color: #cbd5e1 !important; }
+
+.rounded-full.text-xs.font-medium { font-weight: 700 !important; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+.tickets-table.compact td { padding-top: 6px !important; padding-bottom: 6px !important; }
+.tickets-table.cozy td { padding-top: 14px !important; padding-bottom: 14px !important; }
+.tickets-table th, .tickets-table td { vertical-align: top; }
+.tickets-issue { white-space: normal; word-break: break-word; }
+.tickets-email { white-space: normal; word-break: break-all; }
+
+.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+.tabs-indicator {
+    position: absolute; bottom: -1px; height: 2px;
+    background: #16a34a; border-radius: 9999px;
+    transition: transform .22s cubic-bezier(.2,.6,.2,1), width .22s cubic-bezier(.2,.6,.2,1), opacity .15s ease;
+    will-change: transform, width;
+    pointer-events: none; opacity: 0;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .sidebar-analytics { display: none; }
+    main { padding-left: 1rem !important; }
+}
+@media (max-width: 768px) {
+    .glassmorphism { margin: 0.5rem; padding: 1rem; }
+    .tickets-table { font-size: 0.75rem; }
+    .tickets-table th, .tickets-table td { padding: 0.5rem 0.75rem; }
+}
+@media (max-width: 640px) {
+    main { padding: 0.5rem; }
+    #statusTabs .tab-link { padding: 0.5rem 0.75rem; font-size: 0.75rem; }
+}

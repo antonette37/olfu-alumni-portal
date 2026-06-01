@@ -1,0 +1,143 @@
+    /* Info cards hover effect */
+    .info-card {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .info-card:hover {
+      background-color: #166534; /* Tailwind green-700 */
+      color: white;
+    }
+    .info-card:hover p {
+      color: inherit;
+    }
+    /* Header categories hover green */
+    nav ul li a {
+      transition: color 0.3s;
+      text-decoration: none !important;
+      color: #4b5563; /* Tailwind gray-700 */
+    }
+    nav ul li a:hover {
+      color: #166534 !important; /* Tailwind green-700 */
+      text-decoration: none !important;
+    }
+    /* Pagination dots container */
+    #paginationDots {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 30;
+    }
+    /* Pagination dots */
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      flex-shrink: 0;
+    }
+    .dot.active {
+      background-color: white;
+      transform: scale(1.3);
+    }
+    .dot:hover {
+      background-color: #a7f3d0; /* Tailwind green-200 */
+    }
+    /* Fade transition for hero content */
+    #heroContentContainer {
+      transition: opacity 0.4s ease;
+      opacity: 1;
+    }
+    #heroContentContainer.fade-out {
+      opacity: 0;
+    }
+    /* Responsive logo */
+    .logo-img {
+      max-width: 40px;
+      max-height: 40px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+      body {
+    font-family: 'Inter', sans-serif;
+   }
+   /* Custom scrollbar for modal */
+   .modal-scroll::-webkit-scrollbar {
+    width: 6px;
+   }
+   .modal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+   }
+   .modal-scroll::-webkit-scrollbar-thumb {
+    background: #166534;
+    border-radius: 3px;
+   }
+   /* Smooth focus ring */
+   input:focus, select:focus, button:focus {
+    outline-offset: 2px;
+    outline-color: #166534;
+    outline-style: solid;
+    outline-width: 2px;
+   }
+   /* Animated floating label */
+   .floating-label {
+    position: relative;
+   }
+   .floating-label input,
+   .floating-label select {
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+   }
+   .floating-label label {
+    position: absolute;
+    top: 0.375rem;
+    left: 0.75rem;
+    font-size: 0.65rem;
+    color: #4b5563;
+    font-weight: 600;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    background: white;
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+   }
+   .floating-label input:focus + label,
+   .floating-label input:not(:placeholder-shown) + label,
+   .floating-label select:focus + label,
+   .floating-label select:not([value=""]) + label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.55rem;
+    color: #166534;
+    font-weight: 700;
+   }
+   /* Button hover gradient */
+   .btn-gradient {
+    background: linear-gradient(90deg, #166534 0%, #4ade80 100%);
+    transition: background-position 0.4s ease;
+    background-size: 200% 100%;
+    background-position: left center;
+   }
+   .btn-gradient:hover {
+    background-position: right center;
+   }
+   /* Close button hover effect */
+   .close-btn:hover {
+    color: #dc2626;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease, color 0.3s ease;
+   }
+   /* Hide modal by default */
+   #modal-overlay {
+    display: none;
+   }

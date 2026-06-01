@@ -1,0 +1,35 @@
+# Dependencies
+AlumniApp/node_modules/
+public_html/node_modules/
+
+# Expo / React Native
+AlumniApp/.expo/
+AlumniApp/dist/
+AlumniApp/web-build/
+
+# Secrets (copy from *.example.php after clone)
+public_html/db_config.php
+public_html/email_config.php
+.env
+.env.*
+!.env.example
+
+# User uploads & runtime logs
+public_html/uploads/
+public_html/logs/
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+.trash/
+
+# Build / cache
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision

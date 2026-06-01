@@ -1,0 +1,173 @@
+body {
+  font-family: 'century gothic', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.header {
+  background: linear-gradient(to right, #5fa44d 30%, #0b3d2c 70%);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header img {
+  height: 100px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.title h1 {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.title span {
+  font-size: 25px;
+  color: #000000;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.name-group,
+.info-group,
+.gender-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-group label,
+.info-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.name-group input,
+.info-group input,
+.info-group input[type="date"],
+.info-group select {
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.info-group input {
+  width: 100%;
+}
+
+.name-row,
+.info-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.name-row {
+  gap: 5%;
+}
+
+.gender-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-row label {
+  margin-right: 10px;
+}
+.form-row input,
+.form-row select {
+  margin-right: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(200, 196, 196);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.762);
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+a:link,
+a:visited {
+  background-color: hsl(85, 75%, 27%);
+  color: rgb(144, 228, 148);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-color: rgb(91, 151, 75);
+}

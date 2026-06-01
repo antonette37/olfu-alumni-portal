@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "CCS Alumni Portal",
+    "slug": "olfu-ccs-alumni",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "description": "OLFU CCS Alumni Portal — connected to ccsolfualumni.sbs",
+    "primaryColor": "#0d2e18",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0d2e18"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.olfu.ccsalumni"
+    },
+    "android": {
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0d2e18"
+      },
+      "package": "com.olfu.ccsalumni",
+      "permissions": [
+        "INTERNET",
+        "READ_MEDIA_IMAGES",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow CCS Alumni to access photos for ID and profile uploads."
+        }
+      ],
+      "expo-font",
+      "expo-asset"
+    ]
+  }
+}
