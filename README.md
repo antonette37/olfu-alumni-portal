@@ -113,13 +113,13 @@ http://localhost/project-folder-name
 ![Dashboard](screenshots/dashboard.png)
 
 ### Alumni Card
-![Profile Management](screenshots/alumni-card.png)
+![Alumni Cardt](screenshots/alumni-card.png)
 
 ### Alumni Directory
 ![Alumni Directory](screenshots/alumni-directory.png)
 
 ### Career Center
-![Profile Management](screenshots/career-centert.png)
+![Career Center](screenshots/career-center.png)
 
 ## Author
 
