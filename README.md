@@ -4,17 +4,68 @@ A full-stack web application developed for Our Lady of Fatima University (OLFU) 
 
 ## Overview
 
-The OLFU Alumni Portal was developed as a capstone project to provide a centralized platform for alumni data management. The system allows graduates to maintain updated profiles while enabling administrators to monitor alumni records efficiently.
+The OLFU Alumni Portal is a full-stack alumni engagement and career networking platform developed for Our Lady of Fatima University. The system provides identity verification, digital alumni ID generation, alumni directory management, and a Career Center where students and alumni can connect, share opportunities, and support each other's professional growth.
 
-## Features
+The platform serves as a centralized ecosystem that strengthens alumni engagement while helping users build professional networks and discover career opportunities.
 
-* User authentication and secure login
-* Alumni profile management
-* Resume upload and storage
-* Alumni record tracking
-* Search and filtering functionality
-* Responsive web interface
-* Database-driven information management
+## Core Features
+
+### Smart Registration and Verification
+
+* Separate registration workflows for New Graduates and Existing Alumni
+* Student ID verification for new graduates
+* Alumni ID verification for existing alumni
+* Automated account validation process
+* Secure authentication and login
+
+### ID Scanning and Data Extraction
+
+* Upload student IDs or alumni IDs during registration
+* Extract information directly from uploaded identification cards
+* Automatically populate registration fields including:
+
+  * Full Name
+  * Student Number
+  * Alumni Number
+  * Course / Program
+  * Other available profile information
+* Reduce manual data entry and registration errors
+
+### Digital Alumni ID Generation
+
+* Generate digital alumni IDs upon approval
+* Downloadable digital alumni cards
+* Secure alumni identity management
+* Digital alternative to physical alumni cards
+
+### Career Center
+
+* Create and publish job opportunities
+* Allow students and alumni to apply for posted positions
+* Support professional networking within the OLFU community
+* Encourage career growth through peer-to-peer opportunities
+* Centralized career engagement platform
+
+### Alumni Directory
+
+* Browse verified alumni profiles
+* Search and filter alumni records
+* Discover professional connections within the university network
+* Strengthen alumni engagement and collaboration
+
+### Profile Management
+
+* Update personal information
+* Manage employment details
+* Upload resumes and career information
+* Maintain professional profiles
+
+### Administration and Monitoring
+
+* Alumni record management
+* User verification workflows
+* System monitoring and reporting
+* Centralized database management
 
 ## Tech Stack
 
