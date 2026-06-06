@@ -98,6 +98,29 @@ http://localhost/project-folder-name
 * Mobile application enhancement
 * Role-based access control
 
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login-page.png)
+
+### Registration Page
+![Login Page](screenshots/registration.png)
+
+### Home 
+![Profile Management](screenshots/home-page.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Alumni Card
+![Profile Management](screenshots/alumni-card.png)
+
+### Alumni Directory
+![Alumni Directory](screenshots/alumni-directory.png)
+
+### Career Center
+![Profile Management](screenshots/career-centert.png)
+
 ## Author
 
 **Ma. Antonette C. Cabang**
