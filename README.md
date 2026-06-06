@@ -1,19 +1,51 @@
-# OLFU CCS Alumni Portal
+# OLFU Alumni Portal
 
-Web alumni portal (`public_html/`) and mobile app (`AlumniApp/`).
+A full-stack web application developed for Our Lady of Fatima University (OLFU) to manage alumni records, profile information, resume submissions, and alumni monitoring processes.
 
-## Setup after clone
+## Overview
 
-1. **Database:** Copy `public_html/db_config.example.php` to `public_html/db_config.php` and set credentials.
-2. **Email:** Copy `public_html/email_config.example.php` to `public_html/email_config.php` and set SMTP settings.
-3. **Uploads:** Create `public_html/uploads/` on the server (not in git).
-4. **Mobile app:**
-   ```bash
-   cd AlumniApp
-   npm install
-   npm run start:lan
-   ```
+The OLFU Alumni Portal was developed as a capstone project to provide a centralized platform for alumni data management. The system allows graduates to maintain updated profiles while enabling administrators to monitor alumni records efficiently.
 
-## Deploy
+## Features
 
-Upload `public_html/` to Hostinger. Keep `db_config.php` and `email_config.php` only on the server.
+- User authentication and secure login
+- Alumni profile management
+- Resume upload and storage
+- Alumni record tracking
+- Search and filtering functionality
+- Responsive web interface
+- Database-driven information management
+
+## Tech Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- PHP
+
+### Database
+- MySQL
+
+### Tools & Deployment
+- XAMPP
+- Hostinger
+- GitHub
+
+## System Architecture
+
+The application follows a client-server architecture:
+
+- Frontend handles user interaction and data presentation.
+- Backend processes business logic and database operations.
+- MySQL stores alumni information and uploaded records.
+- REST-based communication supports data exchange between modules.
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/antonette37/olfu-alumni-portal.git
