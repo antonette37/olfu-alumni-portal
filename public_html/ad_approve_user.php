@@ -483,16 +483,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id']) && isset($
                     error_log("Using PHPMailer directly to send email for user_id: " . $user_id);
                     try {
                         $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
-                        
-                        // Server settings (adjust to your SMTP creds)
+
+                        // Load SMTP config from email_config.php or environment
+                        require_once __DIR__ . '/email_config.php';
+
+                        // Server settings (from email_config.php)
                         $mail->isSMTP();
-                        $mail->Host = 'smtp.gmail.com';
+                        $mail->Host = defined('SMTP_HOST') ? SMTP_HOST : getenv('SMTP_HOST');
                         $mail->SMTPAuth = true;
-                        $mail->Username = 'shairamaebuensucesobasigaa@gmail.com';
-                        $mail->Password = 'iqiakhldmxqdancx';
-                        // Try STARTTLS first (port 587) - more reliable than SMTPS
+                        $mail->Username = defined('SMTP_USERNAME') ? SMTP_USERNAME : getenv('SMTP_USERNAME');
+                        $mail->Password = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : getenv('SMTP_PASSWORD');
                         $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
-                        $mail->Port = 587;
+                        $mail->Port = defined('SMTP_PORT') ? SMTP_PORT : 587;
                         
                         // Timeout settings
                         $mail->Timeout = 30;
@@ -515,8 +517,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id']) && isset($
 
                         // Recipients
                         $mail->CharSet = 'UTF-8';
-                        $mail->setFrom('shairamaebuensucesobasigaa@gmail.com', 'OLFU ALUMNI AFFAIRS');
-                        $mail->addReplyTo('shairamaebuensucesobasigaa@gmail.com', 'OLFU ALUMNI AFFAIRS');
+                        $fromEmail = defined('SMTP_FROM_EMAIL') ? SMTP_FROM_EMAIL : getenv('SMTP_FROM_EMAIL');
+                        $fromName = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : getenv('SMTP_FROM_NAME');
+                        $mail->setFrom($fromEmail, $fromName);
+                        $mail->addReplyTo($fromEmail, $fromName);
                         $mail->addAddress($recipient);
                         error_log("Preparing to send email to: " . $recipient . " for user_id: " . $user_id);
 

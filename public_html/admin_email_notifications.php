@@ -4,8 +4,10 @@
  * Sends email notifications to admin when new users, inquiries, or content requests are submitted
  */
 
-// Admin email address
-define('ADMIN_EMAIL', 'luisallavore@gmail.com');
+// Admin email address - use environment variable or define in email_config.php
+if (!defined('ADMIN_EMAIL')) {
+    define('ADMIN_EMAIL', getenv('ADMIN_EMAIL') ?: 'admin@alumni.local');
+}
 
 /**
  * Send admin notification email for new user registration
