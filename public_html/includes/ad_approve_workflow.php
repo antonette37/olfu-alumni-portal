@@ -105,14 +105,17 @@ function ad_approve_send_notification_email(
 
     if (!$email_sent && $phpmailer_available && class_exists('PHPMailer\PHPMailer\PHPMailer')) {
         try {
+            // Load SMTP config from email_config.php
+            require_once dirname(__DIR__) . '/email_config.php';
+
             $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
+            $mail->Host = defined('SMTP_HOST') ? SMTP_HOST : getenv('SMTP_HOST') ?: 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'shairamaebuensucesobasigaa@gmail.com';
-            $mail->Password = 'iqiakhldmxqdancx';
+            $mail->Username = defined('SMTP_USERNAME') ? SMTP_USERNAME : getenv('SMTP_USERNAME');
+            $mail->Password = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : getenv('SMTP_PASSWORD');
             $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $mail->Port = defined('SMTP_PORT') ? SMTP_PORT : (getenv('SMTP_PORT') ?: 587);
             $mail->Timeout = 30;
             $mail->SMTPKeepAlive = false;
             $mail->SMTPOptions = [
@@ -124,8 +127,10 @@ function ad_approve_send_notification_email(
             ];
             $mail->SMTPDebug = 0;
             $mail->CharSet = 'UTF-8';
-            $mail->setFrom('shairamaebuensucesobasigaa@gmail.com', 'OLFU ALUMNI AFFAIRS');
-            $mail->addReplyTo('shairamaebuensucesobasigaa@gmail.com', 'OLFU ALUMNI AFFAIRS');
+            $fromEmail = defined('SMTP_FROM_EMAIL') ? SMTP_FROM_EMAIL : getenv('SMTP_FROM_EMAIL');
+            $fromName = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : (getenv('SMTP_FROM_NAME') ?: 'OLFU ALUMNI AFFAIRS');
+            $mail->setFrom($fromEmail, $fromName);
+            $mail->addReplyTo($fromEmail, $fromName);
             $mail->addAddress($recipient);
             $mail->isHTML(true);
             if ($isApprove) {

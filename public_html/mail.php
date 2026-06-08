@@ -202,17 +202,17 @@ foreach ($config_paths as $path) {
 // Define defaults if config file not found
 if (!$config_loaded) {
     if (!defined('SMTP_HOST'))
-        define('SMTP_HOST', 'smtp.gmail.com');
+        define('SMTP_HOST', getenv('SMTP_HOST') ?: 'smtp.gmail.com');
     if (!defined('SMTP_PORT'))
-        define('SMTP_PORT', 587);
+        define('SMTP_PORT', getenv('SMTP_PORT') ?: 587);
     if (!defined('SMTP_USERNAME'))
-        define('SMTP_USERNAME', 'shairamaebuensucesobasigaa@gmail.com');
+        define('SMTP_USERNAME', getenv('SMTP_USERNAME') ?: '');
     if (!defined('SMTP_PASSWORD'))
-        define('SMTP_PASSWORD', 'iqiakhldmxqdancx');
+        define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: '');
     if (!defined('SMTP_FROM_EMAIL'))
-        define('SMTP_FROM_EMAIL', 'shairamaebuensucesobasigaa@gmail.com');
+        define('SMTP_FROM_EMAIL', getenv('SMTP_FROM_EMAIL') ?: '');
     if (!defined('SMTP_FROM_NAME'))
-        define('SMTP_FROM_NAME', 'OLFU ALUMNI AFFAIRS');
+        define('SMTP_FROM_NAME', getenv('SMTP_FROM_NAME') ?: 'OLFU ALUMNI AFFAIRS');
     if (!defined('ENVIRONMENT'))
         define('ENVIRONMENT', 'production');
     if (!defined('SMTP_AUTO_TLS'))
@@ -266,12 +266,12 @@ function sendEmail($recipient_email, $subject, $body, array $attachments = [])
         return false;
     }
 
-    $host = defined('SMTP_HOST') ? SMTP_HOST : 'smtp.gmail.com';
-    $port = defined('SMTP_PORT') ? SMTP_PORT : 587;
-    $username = defined('SMTP_USERNAME') ? SMTP_USERNAME : 'shairamaebuensucesobasigaa@gmail.com';
-    $password = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : 'iqiakhldmxqdancx';
-    $from_email = defined('SMTP_FROM_EMAIL') ? SMTP_FROM_EMAIL : 'shairamaebuensucesobasigaa@gmail.com';
-    $from_name = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : 'OLFU ALUMNI AFFAIRS';
+    $host = defined('SMTP_HOST') ? SMTP_HOST : getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+    $port = defined('SMTP_PORT') ? SMTP_PORT : (getenv('SMTP_PORT') ?: 587);
+    $username = defined('SMTP_USERNAME') ? SMTP_USERNAME : getenv('SMTP_USERNAME');
+    $password = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : getenv('SMTP_PASSWORD');
+    $from_email = defined('SMTP_FROM_EMAIL') ? SMTP_FROM_EMAIL : getenv('SMTP_FROM_EMAIL');
+    $from_name = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : (getenv('SMTP_FROM_NAME') ?: 'OLFU ALUMNI AFFAIRS');
     $timeout = defined('SMTP_TIMEOUT') ? SMTP_TIMEOUT : 30;
     $env = defined('ENVIRONMENT') ? ENVIRONMENT : 'production';
     $log("Preparing email. Host={$host}, Port={$port}, Username={$username}");
