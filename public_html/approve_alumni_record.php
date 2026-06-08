@@ -1,33 +1,22 @@
 <?php
 session_start();
 
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 // Check if coordinator is logged in
 if (!isset($_SESSION['coordinator_logged_in']) || $_SESSION['coordinator_logged_in'] !== true) {
-    error_log('Unauthorized access attempt - Session data: ' . print_r($_SESSION, true));
     echo json_encode(['success' => false, 'error' => 'Unauthorized access']);
     exit();
 }
 
 // Get JSON data from request
-$raw_data = file_get_contents('php://input');
-error_log('Received raw data: ' . $raw_data);
-$data = json_decode($raw_data, true);
+$data = json_decode(file_get_contents('php://input'), true);
 
 if (!isset($data['id'])) {
-    error_log('Missing user ID in request');
     echo json_encode(['success' => false, 'error' => 'User ID is required']);
     exit();
 }
 
-// Database connection for web hosting
-$host = 'localhost'; // Your web hosting database host
-$user = 'u123456789_caps'; // Your web hosting database username
-$pass = 'your_password'; // Your web hosting database password
-$db = 'u123456789_caps'; // Your web hosting database name
+require_once 'db_config.php';
+$conn = getDBConnection();
 
 require_once 'db_config.php';
 $conn = getDBConnection();

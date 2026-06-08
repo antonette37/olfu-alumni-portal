@@ -67,11 +67,8 @@ CREATE TABLE `itcp` (
 
 --
 -- Dumping data for table `itcp`
+-- Data removed - use only table schema
 --
-
-INSERT INTO `itcp` (`id`, `photo`, `lastname`, `firstname`, `middlename`, `name_ext`, `birthday`, `age`, `gender`, `civil_status`, `religion`, `nationality`, `email`, `address`, `personal_contact`, `emergency_contact`, `student_number`, `program`, `campus`, `month_graduated`, `year_graduated`, `post_grad`, `licensure_exam`, `club_involvement`, `employment_status`, `company`, `industry`, `position`, `employment_history`, `previous_role`, `length_of_service`, `consent`, `password`) VALUES
-(11, 'mener.jpg', 'Buensuceso', 'Mener', 'Peralta', '', '1981-01-05', 44, 'Female', 'Single', 'Catholic', 'Filipino', 'menerbasiga@gmail.com', 'Marikina City', '456456', '789789', '1-2345679-8', 'BSIT', 'Antipolo Campus', '0', '2025', '', 'LPT', 'Garments Fashion and Design', 'Employed', 'DSWD', 'Day Care', 'Teacher', '', '', '', 1, '$2y$10$4E1Dn0Q7wnbPJpWhZezOeOIuLFNWlV1.z7PS1lA5oL1NChvx80fPi'),
-(14, 'basiga.jpg', 'Basiga', 'Shaira Mae', 'Buensuceso', '', '2001-05-04', 23, '', 'Single', 'Catholic', 'Filipino', 'secretnishairamalupet@gmail.com', '25 Daisy Street Purok 7 Phase 3 Malanday Marikina City', '09916296883', '09513133916', '03210002203', 'BSIT', 'Antipolo Campus', '0', '2026', '', '', 'FCMS', 'Employed', 'International AIA Express', 'Logistics', 'Documentation Custodian', 'DOLE - NCR', 'Intern', '6 months', 1, '$2y$10$Ry0zAUQGPulFC3eeYQD//.RIdQYpX.xjCpO/p7AWtaVYp11WeICvi');
 
 --
 -- Indexes for dumped tables

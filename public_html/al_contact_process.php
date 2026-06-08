@@ -5,19 +5,8 @@ require_once 'mail.php';
 require_once 'admin_email_notifications.php';
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
-$host = "localhost";
-$dbname = "alumni_system";
-$username = "root"; 
-$password = "";    
-
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Debug: Log received POST data
-    error_log("Contact form POST data: " . print_r($_POST, true));
-    
+
     // Fix field name mapping to match the form
     $name = htmlspecialchars(trim($_POST["firstname"] ?? $_POST["name"] ?? ""));
     // Always use the logged-in user's email from session if available

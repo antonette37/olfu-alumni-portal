@@ -9,9 +9,6 @@ header('Content-Type: application/json');
 session_start();
 require_once 'config.php';
 
-// Debug: Log incoming data
-error_log("POST data: " . print_r($_POST, true));
-
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     echo json_encode(['success' => false, 'message' => 'User not authenticated']);
@@ -31,8 +28,6 @@ $description = isset($_POST['description']) ? trim($_POST['description']) : '';
 $date_achieved = isset($_POST['date_achieved']) ? trim($_POST['date_achieved']) : '';
 $visibility = isset($_POST['visibility']) ? trim($_POST['visibility']) : 'Public';
 
-// Debug: Log processed data
-error_log("Processed data: milestone_id=$milestone_id, title=$title, date_achieved=$date_achieved, visibility=$visibility");
 
 // Validate required fields
 if (!$milestone_id || !$title || !$date_achieved) {

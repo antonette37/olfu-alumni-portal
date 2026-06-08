@@ -51,9 +51,6 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 
 $profile_id = (int)$_GET['id'];
 
-// Debug: Log the IDs to verify
-error_log("View Profile - Viewer ID: " . $viewer_id . ", Profile ID: " . $profile_id . ", GET ID: " . ($_GET['id'] ?? 'not set'));
-
 // If viewing own profile, redirect to al_profile.php
 if ($profile_id == $viewer_id) {
     header("Location: al_profile.php");
