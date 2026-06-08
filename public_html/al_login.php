@@ -42,9 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Please enter both email and password.';
     } else {
         $admin_username = "admin";
-        $admin_password = "ccsalumniadmin1";
+        $admin_password = getenv('ADMIN_PASSWORD') ?: ''; // Must be set in environment
 
-        if ($emailInput === $admin_username && $password === $admin_password) {
+        if ($emailInput === $admin_username && !empty($admin_password) && $password === $admin_password) {
             $_SESSION['admin_logged_in'] = true;
             header("Location: ad_dashboard.php");
             exit();

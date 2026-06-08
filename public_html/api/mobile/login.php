@@ -35,12 +35,12 @@ if (empty($email) || empty($password)) {
 
 try {
     $conn = getDBConnection();
-    
+
     // Check for admin credentials
     $admin_username = "admin";
-    $admin_password = "ccsalumniadmin1";
-    
-    if ($email === $admin_username && $password === $admin_password) {
+    $admin_password = getenv('ADMIN_PASSWORD') ?: ''; // Must be set in environment
+
+    if ($email === $admin_username && !empty($admin_password) && $password === $admin_password) {
         // Admin login - return admin user data
         echo json_encode([
             'success' => true,

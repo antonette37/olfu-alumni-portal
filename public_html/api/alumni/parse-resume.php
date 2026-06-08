@@ -232,7 +232,10 @@ if (!$copySuccess || !file_exists($resumePath)) {
 $resumeWebPath = 'uploads/resumes/' . $resumeName;
 
 // Hard-enforce the provided Affinda API key (ignore environment)
-$apiKey = 'aff_79f6e90a0a92c5eeaf3f1ad7e61fcb8fea5b3b54';
+$apiKey = getenv('AFFINDA_API_KEY') ?: '';
+if (empty($apiKey)) {
+    send_json_response(['success' => false, 'error' => 'Affinda API key not configured'], 500);
+}
 $keySuffix = substr($apiKey, -6);
 
 // Workspace (optional for v3). If not set, fall back to v2.

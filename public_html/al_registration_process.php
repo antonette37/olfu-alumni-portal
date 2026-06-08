@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, ['file' => $resume_file]);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            "Authorization: Bearer aff_06f41013821cbecdba640e5eae07f836bf591e28",
+            "Authorization: Bearer " . (getenv('AFFINDA_API_KEY') ?: ''),
             "Content-Type: multipart/form-data"
         ]);
 
