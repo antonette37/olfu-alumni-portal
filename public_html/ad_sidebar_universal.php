@@ -50,7 +50,7 @@ $is_reports_active = in_array($current_page, $reports_pages);
                 </div>
             </div>
             <div class="hidden group-hover:block text-center mt-3 px-1">
-                <h3 class="font-semibold text-sm leading-snug">Geraldine Layugan</h3>
+                <h3 class="font-semibold text-sm leading-snug">admin</h3>
                 <p class="text-xs text-[#ffcccc]">System Administrator</p>
             </div>
         </div>
